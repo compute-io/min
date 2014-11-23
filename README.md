@@ -22,6 +22,17 @@ To use the module,
 var min = require( 'compute-min' );
 ```
 
+#### min( arr )
+
+Computes the minimum value of an `array`.
+
+``` javascript
+var data = [ 3, 2, 5, 2, 10 ];
+
+var val = min( data );
+// returns 2
+```
+
 
 ## Examples
 
@@ -66,7 +77,7 @@ $ make test-cov
 Istanbul creates a `./reports/coverage` directory. To access an HTML version of the report,
 
 ``` bash
-$ open reports/coverage/lcov-report/index.html
+$ make view-cov
 ```
 
 

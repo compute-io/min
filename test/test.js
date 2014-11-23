@@ -1,3 +1,4 @@
+'use strict';
 
 // MODULES //
 
@@ -17,7 +18,6 @@ var expect = chai.expect,
 // TESTS //
 
 describe( 'compute-min', function tests() {
-	'use strict';
 
 	it( 'should export a function', function test() {
 		expect( min ).to.be.a( 'function' );

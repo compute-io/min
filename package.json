@@ -28,8 +28,11 @@
     "computation",
     "statistics",
     "stats",
+    "mathematics",
+    "math",
     "min",
-    "minimum"
+    "minimum",
+    "array"
   ],
   "bugs": {
     "url": "https://github.com/compute-io/min/issues"
