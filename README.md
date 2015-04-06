@@ -16,15 +16,13 @@ For use in the browser, use [browserify](https://github.com/substack/node-browse
 
 ## Usage
 
-To use the module,
-
 ``` javascript
 var min = require( 'compute-min' );
 ```
 
-#### min( arr )
+#### min( arr[, accessor] )
 
-Computes the minimum value of an `array`.
+Computes the minimum value of an `array`. For numeric `arrays`,
 
 ``` javascript
 var data = [ 3, 2, 5, 2, 10 ];
@@ -33,12 +31,32 @@ var val = min( data );
 // returns 2
 ```
 
+For non-numeric `arrays`, provide an accessor `function` for accessing numeric values
+
+``` javascript
+var arr = [
+	{'x':3},
+	{'x':2},
+	{'x':5},
+	{'x':2},
+	{'x':10}
+];
+
+function getValue( d ) {
+	return d.x;
+}
+
+var val = min( arr, getValue );
+// returns 2
+```
+
 
 ## Examples
 
 ``` javascript
-var data = new Array( 1000 );
+var min = require( 'compute-min' );
 
+var data = new Array( 1000 );
 for ( var i = 0; i < data.length; i++ ) {
 	data[ i ] = Math.random()*1000;
 }
@@ -57,7 +75,7 @@ $ node ./examples/index.js
 
 ### Unit
 
-Unit tests use the [Mocha](http://visionmedia.github.io/mocha) test framework with [Chai](http://chaijs.com) assertions. To run the tests, execute the following command in the top-level application directory:
+Unit tests use the [Mocha](http://mochajs.org) test framework with [Chai](http://chaijs.com) assertions. To run the tests, execute the following command in the top-level application directory:
 
 ``` bash
 $ make test
@@ -81,15 +99,15 @@ $ make view-cov
 ```
 
 
+---
 ## License
 
 [MIT license](http://opensource.org/licenses/MIT). 
 
 
----
 ## Copyright
 
-Copyright &copy; 2014. Athan Reines.
+Copyright &copy; 2014-2015. Athan Reines.
 
 
 [npm-image]: http://img.shields.io/npm/v/compute-min.svg
