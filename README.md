@@ -50,6 +50,8 @@ var val = min( arr, getValue );
 // returns 2
 ```
 
+__Note__: if provided an empty `array`, the function returns `null`.
+
 
 ## Examples
 
