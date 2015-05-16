@@ -33,7 +33,9 @@
 		"min",
 		"minimum",
 		"array",
-		"range"
+		"range",
+		"extent",
+		"accessor"
 	],
 	"bugs": {
 		"url": "https://github.com/compute-io/min/issues"
