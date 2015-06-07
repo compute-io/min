@@ -223,8 +223,8 @@ describe( 'compute-min', function tests() {
 		mat = matrix( data, [5,5], 'int8' );
 
 		// ensure that values in matrix are not all ordered
-		mat.set( 0, 3, 5 );
-		mat.set( 0, 4, 4 );
+		mat.set( 0, 1, 1 );
+		mat.set( 0, 0, 2 );
 
 		// Default:
 		m = min( mat );
@@ -244,7 +244,7 @@ describe( 'compute-min', function tests() {
 		m = min( mat, {
 			'dim': 1
 		});
-		expected = '1,2,3,5,4';
+		expected = '2,1,3,4,5';
 
 		assert.strictEqual( m.toString(), expected, 'dim: 1' );
 	});
