@@ -55,7 +55,6 @@ function getValue( d ) {
 var val = min( arr, getValue );
 // returns 2
 ```
-__Note__: if provided an empty `array`, the function returns `null`.
 
 If provided a [`matrix`](https://github.com/dstructs/matrix), the function accepts the following `option`:
 
@@ -103,6 +102,8 @@ mu = min( mat, {
 	[ 0 1 2 3 4 ]
 */
 ```
+
+__Note__: if provided an empty `array` or empty `matrix`, the function returns `null`.
 
 ## Examples
 
